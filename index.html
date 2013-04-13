@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>HypeM Hack</title>
+	<link rel="stylesheet" type="text/css" href="http://clintonhalpindesign.com/assets/style/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/style.css">
+</head>
+<body>
+
+<div id="wrapper">
+	<h1>Clinton Halpin's Favorite's</h1>
+		
+	<script id="favorites-template" type="text/x-handlebars-template">
+		{{#each this}}
+		<div class="massdata">
+			<h1>{{artist}} — {{title}}</h1>
+
+			<img src="{{thumb_url_large}}">
+
+
+			<p>{{mediaid}}</p>
+			<p>{{artist}}</p>
+			<p>{{title}}</p>
+			<p>{{dateposted}}</p>
+			<p>{{siteid}}</p>
+			<p>{{sitename}}</p>
+			<p>{{posturl}}</p>
+			<p>{{postid}}</p>
+			<p>{{loved_count}}</p>
+			<p>{{posted_count}}</p>
+			
+			<p>{{thumb_url_artist}}</p>
+			<p>{{time}}</p>
+			<p>{{description}}</p>
+			<p>{{dateloved}}</p>
+			<p>{{itunes_link}}</p>
+		</div>
+		{{/each}}
+
+
+
+	</script>	
+</div>
+
+<!-- Includes -->
+
+<script type="text/javascript" src="assets/js/jquery-1.72.js"></script>
+<script type="text/javascript" src="assets/js/handlebars.js"></script>
+
+<!-- / Includes -->
+
+<script type="text/javascript" src="assets/js/functions.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
