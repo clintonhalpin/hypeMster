@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>HypeM Hack</title>
+	<link rel="stylesheet" type="text/css" href="http://clintonhalpindesign.com/assets/style/reset.css">
+	<link rel="stylesheet" type="text/css" href="../assets/style/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,900,500,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div id="wrapper">
+	<div class="header">
+		<div class="main-tag"><h2><a href="../">HYPEMACHINE</a></h2></div>
+		<span class="page-context"><h2>clintonhalpin Favorites ( 29 )</h2></span>
+		<div class="util"><h2><a href="../">Back</a></h2></div>
+	</div>
+
+	<div class="hypeData"></div>
+		
+	<script id="favorites-template" type="text/x-handlebars-template">
+		{{#each this}}
+		<div class="hypeItem">
+			<p><b>Media ID :</b> {{mediaid}}</p>
+			<p><b>Artist :</b> {{artist}}</p>
+			<p><b>Title :</b> {{title}}</p>
+			<p><b>Date Posted :</b> {{dateposted}}</p>
+			<p><b>Site ID :</b> {{siteid}}</p>
+			<p><b>Site Name :</b> {{sitename}}</p>
+			<p><b>Post URL :</b>  {{posturl}}</p>
+			<p><b>Post ID :</b> {{postid}}</p>
+			<p><b>Loved Count :</b> {{loved_count}}</p>
+			<p><b>Posted Count :</b> {{posted_count}}</p>
+			<p><b>Thumb URL :</b> {{thumb_url}}</p>
+			<p><b>Thumb URL - Medium :</b> {{thumb_url_medium}}</p>
+			<p><b>Thumb URL - Large :</b> {{thumb_url_large}}</p>
+			<p><b>Thumb URL - Artist : </b>{{thumb_url_artist}}</p>
+			<p><b>Time :</b> {{time}}</p>
+			<p><b>Description :</b> {{description}}</p>
+			<p><b>Date Loved :</b> {{dateloved}}</p>
+			<p><b>Itunes Link :</b>{{itunes_link}}</p>
+
+		</div>
+	
+		{{/each}}
+
+
+
+
+	</script>	
+</div>
+
+<!-- Includes -->
+
+<script type="text/javascript" src="../assets/js/jquery-1.72.js"></script>
+<script type="text/javascript" src="../assets/js/handlebars.js"></script>
+
+<!-- / Includes -->
+
+<script type="text/javascript" src="../assets/js/functions.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
