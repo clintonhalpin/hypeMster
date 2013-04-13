@@ -10,52 +10,51 @@
 
 		attachTemplate: function() {
 			var template = Handlebars.compile( this.template );
-			this.container.append( template( this.favorites ) );
-			this.container.append( template( this.suggested ) );
+			this.container.append( template( this.hypeData ) );
 		},
 
 		
-		bindEvents: function() {
-			this.searchInput.on( 'keyup', this.search );
-		},
+		// bindEvents: function() {
+		// 	this.searchInput.on( 'keyup', this.search );
+		// },
 
-		search: function() {
-			var self = Twitter,
-				input = this;
+		// search: function() {
+		// 	var self = Twitter,
+		// 		input = this;
 
-			clearTimeout( self.timer );
+		// 	clearTimeout( self.timer );
 
-			self.timer = ( input.value.length >= 3 ) && setTimeout(function() {
-				self.query = input.value;
-				$.publish( 'twitter/query' );
-			}, 400);
-		},
+		// 	self.timer = ( input.value.length >= 3 ) && setTimeout(function() {
+		// 		self.query = input.value;
+		// 		$.publish( 'twitter/query' );
+		// 	}, 400);
+		// },
 
 
 		fetch: function() {
 			var self = this;
 
 			$.getJSON( this.url, function( data ) {
-				self.favorites = $.map( data, function( favorite ) {
+				self.hypeData = $.map( data, function( hypeData ) {
 					return {
-						mediaid: favorite.mediaid,  
-						artist: favorite.artist,  
-						title: favorite.title,  
-						dateposted: favorite.dateposted,  
-						siteid: favorite.siteid, 
-						sitename: favorite.sitename, 
-						posturl: favorite.posturl, 
-						postid: favorite.postid, 
-						loved_count: favorite.loved_count, 
-						posted_count: favorite.posted_count, 
-						thumb_url: favorite.thumb_url, 
-						thumb_url_medium: favorite.thumb_url_medium, 
-						thumb_url_large: favorite.thumb_url_large, 
-						thumb_url_artist: favorite.thumb_url_artist, 
-						time: favorite.time, 
-						description: favorite.description,
-						dateloved: favorite.dateloved, 
-						itunes_link: favorite.itunes_link
+						mediaid: hypeData.mediaid,  
+						artist: hypeData.artist,  
+						title: hypeData.title,  
+						dateposted: hypeData.dateposted,  
+						siteid: hypeData.siteid, 
+						sitename: hypeData.sitename, 
+						posturl: hypeData.posturl, 
+						postid: hypeData.postid, 
+						loved_count: hypeData.loved_count, 
+						posted_count: hypeData.posted_count, 
+						thumb_url: hypeData.thumb_url, 
+						thumb_url_medium: hypeData.thumb_url_medium, 
+						thumb_url_large: hypeData.thumb_url_large, 
+						thumb_url_artist: hypeData.thumb_url_artist, 
+						time: hypeData.time, 
+						description: hypeData.description,
+						dateloved: hypeData.dateloved, 
+						itunes_link: hypeData.itunes_link
 					};
 				});
 
