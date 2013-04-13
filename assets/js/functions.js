@@ -66,7 +66,7 @@
 
 	hypeM.init({
 		template: $('#favorites-template').html(),
-		container: $('#wrapper'),
+		container: $('.hypeData'),
 		username: 'clintonhalpin'
 	});
 

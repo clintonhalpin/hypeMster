@@ -1,0 +1,30 @@
+		
+	<script id="favorites-template" type="text/x-handlebars-template">
+		{{#each this}}
+		<div>
+			<p>{{mediaid}}</p>
+			<p>{{artist}}</p>
+			<p>{{title}}</p>
+			<p>{{dateposted}}</p>
+			<p>{{siteid}}</p>
+			<p>{{sitename}}</p>
+			<p>{{posturl}}</p>
+			<p>{{postid}}</p>
+			<p>{{loved_count}}</p>
+			<p>{{posted_count}}</p>
+			<p>{{thumb_url}}</p>
+			<p>{{thumb_url_medium}}</p>
+			<p>{{thumb_url_large}}</p>
+			<p>{{thumb_url_artist}}</p>
+			<p>{{time}}</p>
+			<p>{{description}}</p>
+			<p>{{dateloved}}</p>
+			<p>{{itunes_link}}</p>
+		{{/each}}
+
+		// <div class="covers">
+		// 	<img src="{{thumb}}" alt="{{author}}">
+		// 	<p><a href="{{url}}">{{favorite}}</a></p>
+		// </div>
+
+	</script>	

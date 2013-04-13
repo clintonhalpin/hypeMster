@@ -5,38 +5,37 @@
 	<title>HypeM Hack</title>
 	<link rel="stylesheet" type="text/css" href="http://clintonhalpindesign.com/assets/style/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/style/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,900,500,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
 <div id="wrapper">
-	<h1>Clinton Halpin's Favorite's</h1>
+	<div class="header">
+		<div class="main-tag"><h2>HYPEMACHINE</h2></div>
+		<span class="page-context"><h2>clintonhalpin Favorites ( 29 )</h2></span>
+		<div class="util"><h2>Close</h2></div>
+	</div>
+
+	<div class="hypeData"></div>
 		
 	<script id="favorites-template" type="text/x-handlebars-template">
 		{{#each this}}
-		<div class="massdata">
-			<h1>{{artist}} — {{title}}</h1>
+		<div class="hypeItem">
+			<a href="http://hypem.com/track/{{mediaid}}" target="_blank">
+				<img src="{{thumb_url_medium}}">
 
-			<img src="{{thumb_url_large}}">
+				<div class="ItemMeta">
+					<h1>{{artist}}</h1>
+					<h2>{{title}}</h2>
+				</div>
+			</a>
 
-
-			<p>{{mediaid}}</p>
-			<p>{{artist}}</p>
-			<p>{{title}}</p>
-			<p>{{dateposted}}</p>
-			<p>{{siteid}}</p>
-			<p>{{sitename}}</p>
-			<p>{{posturl}}</p>
-			<p>{{postid}}</p>
-			<p>{{loved_count}}</p>
-			<p>{{posted_count}}</p>
-			
-			<p>{{thumb_url_artist}}</p>
-			<p>{{time}}</p>
-			<p>{{description}}</p>
-			<p>{{dateloved}}</p>
-			<p>{{itunes_link}}</p>
 		</div>
+		
+
+
 		{{/each}}
+
 
 
 
