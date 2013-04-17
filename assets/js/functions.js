@@ -6,7 +6,7 @@
 			this.template = config.template;
 			this.container = config.container;
 			this.fetch();
-			this.bind();			
+			this.bindEvents();			
 		},
 
 		attachTemplate: function() {
@@ -15,43 +15,28 @@
 		},
 
 		
-		// bindEvents: function() {
-		// 	this.searchInput.on( 'keyup', this.search );
-		// },
+		bindEvents: function() {
+			$(".search-hypeM").on( 'keyup', this.search );
 
-		// search: function() {
-		// 	var self = Twitter,
-		// 		input = this;
-
-		// 	clearTimeout( self.timer );
-
-		// 	self.timer = ( input.value.length >= 3 ) && setTimeout(function() {
-		// 		self.query = input.value;
-		// 		$.publish( 'twitter/query' );
-		// 	}, 400);
-		// },
-
-		bind: function() {
-			$(".search-hypeM").on('keyup', function(e) {
-
-			if (e.which == 13) {
-				var value = $(this).val();
-					getPizza(value);
-				e.preventDefault();
-				}
-			});
-
-			function getPizza(value){
-			console.log(value);
-			}
 
 		},
 
-		
+		search: function(e) {
+			var self = hypeM,
+				input = this;
 
+				if (e.which == 13) {
+					var value = $(this).val();
+						self.fetch(value);
+				}
+		},
 
-		fetch: function() {
+		fetch: function(value) {
 			var self = this;
+
+			var url = 'http://hypem.com/playlist/loved/' + value + '/json/1/data.json';
+
+		
 
 			$.getJSON( this.url, function( data ) {
 				self.hypeData = $.map( data, function( hypeData ) {

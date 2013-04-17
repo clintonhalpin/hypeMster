@@ -11,14 +11,21 @@
 
 <div class="wrapper">
 	<div class="header">
-		<div class="main-tag"><h2><a href="../">HYPEMACHINE</a></h2></div>
+		<div class="main-tag"><h2><a href="index.html">HYPEMACHINE</a></h2></div>
 		<span class="page-context"><h2>clintonhalpin Favorites ( 29 )</h2></span>
 		<div class="util">
-			<h2><a href="../">Back</a></h2>
-			<h2><a href="searchFunction.html">Search</a></h2>
+			<h2><a href="datadump.html">All Data</a></h2>
+			<h2><a href="#">Search</a></h2>
 		</div>
+	
 	</div>
 
+	<div class="hypeSearch">
+		<form class="form-search">
+		<input type="text" placeholder="Enter a HypeMachine Username" class="search-hypeM">
+
+		</form>
+	</div>
 
 
 	<div class="hypeData"></div>
@@ -26,34 +33,28 @@
 	<script id="favorites-template" type="text/x-handlebars-template">
 		{{#each this}}
 		<div class="hypeItem">
-			<p><b>Media ID :</b> {{mediaid}}</p>
-			<p><b>Artist :</b> {{artist}}</p>
-			<p><b>Title :</b> {{title}}</p>
-			<p><b>Date Posted :</b> {{dateposted}}</p>
-			<p><b>Site ID :</b> {{siteid}}</p>
-			<p><b>Site Name :</b> {{sitename}}</p>
-			<p><b>Post URL :</b>  {{posturl}}</p>
-			<p><b>Post ID :</b> {{postid}}</p>
-			<p><b>Loved Count :</b> {{loved_count}}</p>
-			<p><b>Posted Count :</b> {{posted_count}}</p>
-			<p><b>Thumb URL :</b> {{thumb_url}}</p>
-			<p><b>Thumb URL - Medium :</b> {{thumb_url_medium}}</p>
-			<p><b>Thumb URL - Large :</b> {{thumb_url_large}}</p>
-			<p><b>Thumb URL - Artist : </b>{{thumb_url_artist}}</p>
-			<p><b>Time :</b> {{time}}</p>
-			<p><b>Description :</b> {{description}}</p>
-			<p><b>Date Loved :</b> {{dateloved}}</p>
-			<p><b>Itunes Link :</b>{{itunes_link}}</p>
+			<a href="http://hypem.com/track/{{mediaid}}" target="_blank">
+				<img src="{{thumb_url_medium}}">
+
+				<div class="ItemMeta">
+					<h1>{{artist}}</h1>
+					<h2>{{title}}</h2>
+				</div>
+			</a>
 
 		</div>
-	
+		
+
+
 		{{/each}}
 
 
 
 
 	</script>	
-</div>
+
+	
+</div> <!-- Wrapper -->
 
 <!-- Includes -->
 
