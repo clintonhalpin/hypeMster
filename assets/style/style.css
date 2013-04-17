@@ -1,7 +1,9 @@
 body 
 {  
 	margin: auto; 
-	font: 100%/1.25 'Roboto', 'Helvetica Neue' Helvetica, Arial, San-Serif;
+	font-family:'Roboto', 'Helvetica Neue' Helvetica, Arial, San-Serif;
+	font-size:100%;
+	line-height: 1.25;
 }
 
 a{
@@ -71,6 +73,30 @@ b{
 	width:60%;
 	margin: 0 auto;
 	margin-top:101px;
+}
+
+
+.hypeSearch{
+	width:60%;
+	margin: 0 auto;
+	margin-top:300px;
+}
+
+.hypeSearch input{
+	font-family: 'Roboto';
+	padding: 20px;
+	border-radius: 6px;
+	border: 3px solid #999999;
+	font-size: 20px;
+	font-weight: bold;
+	color:#333333;
+	width: 100%;
+	text-align: center;
+}
+
+.hypeSearch input:focus{
+
+	outline:none;
 }
 
 .hypeItem{

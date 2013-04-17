@@ -16,36 +16,20 @@
 		<div class="util"><h2><a href="tmpls/datadump.html">All Data</a></h2></div>
 	</div>
 
-	<div class="hypeData"></div>
-		
-	<script id="favorites-template" type="text/x-handlebars-template">
-		{{#each this}}
-		<div class="hypeItem">
-			<a href="http://hypem.com/track/{{mediaid}}" target="_blank">
-				<img src="{{thumb_url_medium}}">
+	<div class="hypeSearch">
+		<form class="form-search">
+		<input type="text" placeholder="Enter a HypeMachine Username" class="search-hypeM">
 
-				<div class="ItemMeta">
-					<h1>{{artist}}</h1>
-					<h2>{{title}}</h2>
-				</div>
-			</a>
+		</form>
+	</div>
 
-		</div>
-		
-
-
-		{{/each}}
-
-
-
-
-	</script>	
-</div>
+	
+</div> <!-- Wrapper -->
 
 <!-- Includes -->
 
 <script type="text/javascript" src="assets/js/jquery-1.72.js"></script>
-<script type="text/javascript" src="assets/js/handlebars.js"></script>
+<!-- <script type="text/javascript" src="assets/js/handlebars.js"></script> -->
 
 <!-- / Includes -->
 
