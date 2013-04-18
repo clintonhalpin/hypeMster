@@ -5,58 +5,63 @@
 			this.url = 'http://hypem.com/playlist/loved/' + config.username + '/json/1/data.json';
 			this.template = config.template;
 			this.container = config.container;
-			this.fetch();
-			this.bindEvents();			
+			this.bindEvents();
 		},
 
-		attachTemplate: function() {
+		attachTemplate: function(hypeData) {
+			console.log(hypeData);
+
 			var template = Handlebars.compile( this.template );
 			this.container.append( template( this.hypeData ) );
 		},
 
 		
 		bindEvents: function() {
-			$(".search-hypeM").on( 'keyup', this.search );
+			var self = hypeM;
 
-
-		},
-
-		search: function(e) {
-			var self = hypeM,
-				input = this;
-
+			$(".search-hypeM").keydown(function(e) {
 				if (e.which == 13) {
 					var value = $(this).val();
-						self.fetch(value);
+
+					self.fetch(value);
+
+					return false;
 				}
-			e.preventDefault();
+			});
+
 		},
 
-		fetch: function(value) {
-			var self = this;
-
-			var value = 'anthony';
-
-			var url = 'http://hypem.com/playlist/loved/' + value + '/json/1/data.json';
-
 		
+		fetch: function(value) {
 
-			$.getJSON( this.url, function( data ) {
+			var self = this,
+				v = encodeURIComponent(value.trim()),
+				url = 'http://hypem.com/playlist/loved/' + v + '/json/1/data.json';
+
+			
+
+			$.getJSON( url, function( data ) {
 				self.hypeData = $.map( data, function( hypeData ) {
+					
+					console.log(hypeData);
+
 					return {
-						mediaid: hypeData.mediaid,  artist: hypeData.artist,  title: hypeData.title,  dateposted: hypeData.dateposted,  siteid: hypeData.siteid, sitename: hypeData.sitename, posturl: hypeData.posturl, postid: hypeData.postid, loved_count: hypeData.loved_count, posted_count: hypeData.posted_count, thumb_url: hypeData.thumb_url, thumb_url_medium: hypeData.thumb_url_medium, thumb_url_large: hypeData.thumb_url_large, thumb_url_artist: hypeData.thumb_url_artist, time: hypeData.time, description: hypeData.description,dateloved: hypeData.dateloved, itunes_link: hypeData.itunes_link
+						mediaid: hypeData.version,  artist: hypeData.artist,  title: hypeData.title,  dateposted: hypeData.dateposted,  siteid: hypeData.siteid, sitename: hypeData.sitename, posturl: hypeData.posturl, postid: hypeData.postid, loved_count: hypeData.loved_count, posted_count: hypeData.posted_count, thumb_url: hypeData.thumb_url, thumb_url_medium: hypeData.thumb_url_medium, thumb_url_large: hypeData.thumb_url_large, thumb_url_artist: hypeData.thumb_url_artist, time: hypeData.time, description: hypeData.description,dateloved: hypeData.dateloved, itunes_link: hypeData.itunes_link
 					};
-				});
+			});
 
 				self.attachTemplate(); 
 			});
-		},
+
+
+			
+		}
 	};
 
 	hypeM.init({
 		template: $('#favorites-template').html(),
 		container: $('.hypeData'),
-		username: 'anthony'
+		username: 'anthony a'
 	});
 
 })(jQuery);
