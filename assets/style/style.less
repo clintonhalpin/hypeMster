@@ -3,39 +3,56 @@
 @import "vendor/font-awesome.less";
 
 
-body 
-{  
+// Base
+
+body {  
 	margin: auto; 
 	font-family:'Roboto', 'Helvetica Neue' Helvetica, Arial, San-Serif;
 	font-size:100%;
 	line-height: 1.25;
 }
 
-a{
+a {
 	color:#444;
 	text-decoration: none;
 }
 
-h1{
+h1 {
 	font-size:2.5rem;
 	font-weight:500;
 }
 
-h2{
+h2 {
 	font-size:1.75rem;
 	font-weight:500;
 }
 
-b{
+b {
 	font-weight: 900;
 }
 
-.wrapper{
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
+// Layout
+
+.wrapper {
 	width:100%;
 	margin:0 auto;
 }
 
-.header{
+.hypeResults {
+	width:60%;
+	margin: 0 auto;
+	margin-top:101px;
+}
+
+.header {
 	width: 100%;
 	position: fixed;
 	background-color: #fff;
@@ -47,18 +64,48 @@ b{
 	left: 0px;
 }
 
-.main-tag{
+// Module
+
+/* ====== media ====== */
+.media {
+	margin:10px;
+}
+
+.media, .bd {
+	overflow:hidden;
+	_overflow:visible;
+	zoom:1;
+}
+
+.media .img {
+	float:left; 
+	margin-right: 10px;
+}
+
+.media .img img{
+	display:block;
+}
+
+.media .imgExt{
+	float:right;
+	margin-left: 10px;
+}
+
+
+.main-tag {
 	position: fixed;
 	top:20px;
 	left:20px;
 }
-.util{
+
+
+.util {
 	position: fixed;
 	right:20px;
 	top:20px;
 }
 
-.page-context{
+.page-context {
 	text-align: center;
 	position: fixed;
 	top: 20px;
@@ -66,58 +113,28 @@ b{
 	margin-left: -10%;
 }
 
-.left{
-	float:left;
-}
-
-.right{
-	float:right;
-}
-
-.hypeData{
-	width:60%;
-	margin: 0 auto;
-	margin-top:101px;
-}
-
-
-.hypeSearch{
+.hypeSearch {
 	width:60%;
 	margin: 0 auto;
 	margin-top:100px;
+
+	input {
+		font-family: 'Roboto';
+		padding: 20px;
+		border-radius: 6px;
+		border: 3px solid #999999;
+		font-size: 20px;
+		font-weight: bold;
+		color:#333333;
+		width: 400px;
+		text-align: center;
+
+		&:focus {
+			outline:none;
+		}
+	}
 }
 
-.hypeSearch input{
-	font-family: 'Roboto';
-	padding: 20px;
-	border-radius: 6px;
-	border: 3px solid #999999;
-	font-size: 20px;
-	font-weight: bold;
-	color:#333333;
-	width: 100%;
-	text-align: center;
-}
 
-.hypeSearch input:focus{
 
-	outline:none;
-}
 
-.hypeItem{
-	width:100%;
-	display: block;
-	margin:0 0 40px 0;
-	float:left;
-	position: relative;
-}
-
-.hypeItem img{
-	float:left;
-}
-
-.ItemMeta{
-	float:left;
-	padding-left:20px;
-
-}

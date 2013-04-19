@@ -1,15 +1,17 @@
 	<script id="favorites-template" type="text/x-handlebars-template">
 		{{#each this}}
-			<div class="hypeItem">
-				<a href="http://hypem.com/track/{{mediaid}}" target="_blank">
-					<img src="{{thumb_url_medium}}">
-
-					<div class="ItemMeta">
-						<h1>{{artist}}</h1>
-						<h2>{{title}}</h2>
-					</div>
+			<div class="media">
+				<a href="http://hypem.com/track/{{mediaid}}" class="img">
+					<img src="{{thumb_url_medium}}" alt="{{artist}}">
 				</a>
 
+				<div class="bd">
+					<h1>{{artist}} - {{title}}</h1>
+					
+				</div>
+
 			</div>
+
 		{{/each}}
 	</script>	
+

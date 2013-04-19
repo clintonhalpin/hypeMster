@@ -11,7 +11,7 @@
 		</form>
 	</div>
 	
-	<div class="hypeData"></div>
+	<div class="hypeResults"></div>
 
 <!-- / Page Contents -->		
 
