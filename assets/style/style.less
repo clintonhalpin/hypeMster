@@ -1,9 +1,15 @@
 @import "lib/reset.less";
 @import "lib/mixins.less";
-@import "vendor/font-awesome.less";
 
-
-
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../font/fontawesome-webfont.eot?v=3.0.1');
+  src: url('../font/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
+    url('../font/fontawesome-webfont.woff?v=3.0.1') format('woff'),
+    url('../font/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 
@@ -11,10 +17,13 @@
 
 body {  
 	margin: auto; 
-	font-family:'Roboto', 'Helvetica Neue' Helvetica, Arial, San-Serif;
+	font-family:'FontAwesome', 'Helvetica Neue' Helvetica, Arial, San-Serif;
 	font-size:100%;
 	line-height: 1.25;
 }
+
+.main-tag:before { content: "\f000"; }
+
 
 a {
 	color:#444;

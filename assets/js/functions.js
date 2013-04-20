@@ -16,7 +16,7 @@
 
 			this.container.empty();
 			
-			// Compile the Container
+			// Append To Container
 
 			this.container.append( template( this.hypeData ) );
 		},
@@ -34,15 +34,25 @@
 					return false;
 				}
 			});
+
+			$(window).scroll(function() {
+				var scroll = $(window).scrollTop();
+
+				if ( scroll >= 20 ) {
+					$(".header").addClass("header-small");
+				} else {
+					$(".header").removeClass("header-small");
+				}
+			});
 		},
 		
 		fetch: function(value) {
 			var self = this,
-				// v = encodeURIComponent(value.trim()),
-				// urlUsername = 'http://hypem.com/playlist/loved/' + v + '/json/1/data.json',
-				// urlSearch = 'http://hypem.com/playlist/search/' + v + '/json/1/data.json';
+				v = encodeURIComponent(value.trim()),
+				urlUsername = 'http://hypem.com/playlist/loved/' + v + '/json/1/data.json',
+				urlSearch = 'http://hypem.com/playlist/search/' + v + '/json/1/data.json';
 
-				urlSearchBaked = "http://localhost/develop/hypem/v1/sampledata.json";
+				// urlSearchBaked = 'localhost/develop/hypem/v1/sampledata.json';
 
 			$.getJSON( urlSearchBaked, function( data ) {
 				self.hypeData = $.map( data, function( hypeData ) {
@@ -68,16 +78,7 @@
 
 
 
-$(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    
-	if ( scroll >= 20 ) {
-		$(".header").addClass("header-small");
-	} else {
-		$(".header").removeClass("header-small");
-	}
 
- });
 
 
 
