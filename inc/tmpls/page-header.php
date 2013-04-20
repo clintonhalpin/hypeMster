@@ -7,7 +7,7 @@
 					<h2>X Showing 18 Results for "Asap Rocky"</h2>
 				</div>-->
 				<div class="hypeSearch">
-						<form class="form-search">
+						<form class="form-search icon-search">
 							<input type="text" placeholder="Search the Hype Machine" class="search-hypeM">
 						</form>
 				</div>

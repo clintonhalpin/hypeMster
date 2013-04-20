@@ -5,7 +5,7 @@
 
 <!-- Page Contents -->
 	
-	<div class="hypeResults"></div>
+	<div class="hypeResults" style="height:9000px;"></div>
 
 <!-- / Page Contents -->		
 

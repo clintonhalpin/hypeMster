@@ -1,18 +1,6 @@
 @import "lib/reset.less";
 @import "lib/mixins.less";
 
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('../font/fontawesome-webfont.eot?v=3.0.1');
-  src: url('../font/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
-    url('../font/fontawesome-webfont.woff?v=3.0.1') format('woff'),
-    url('../font/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-
 // Base
 
 body {  
@@ -21,9 +9,6 @@ body {
 	font-size:100%;
 	line-height: 1.25;
 }
-
-.main-tag:before { content: "\f000"; }
-
 
 a {
 	color:#444;
@@ -127,25 +112,40 @@ b {
 .hypeSearch {
 	width:60%;
 	margin: 0 auto;
+	position: relative;
 
 	input {
 		font-family: 'Roboto';
-		padding: 10px;
+		padding: 10px 10px 10px 50px;
 		border-radius: 6px;
 		
 		font-size: 20px;
 		font-weight: bold;
 
 		width: 400px;
-		text-align: center;
+		position: relative;
 		.transition(all 0.08s ease-out);
 
 		&:focus {
-			padding:15px;
+			color:#646464;
+			padding: 15px 15px 15px 60px;
 			outline:none;
-			margin-top:-2px;
+			margin-top:0;
 		}
 	}
+}
+
+.form-search{
+	position: relative;
+		
+		&:before{
+			color:#646464;
+			position: absolute;
+			top: -5px;
+			left: 20px;
+			z-index: 500;
+			font-size: 1.25rem;
+		}
 }
 
 .results-shown{
@@ -190,6 +190,10 @@ b {
 		left:30px;
 	}
 
+	input:focus{
+		margin-top:-2px;
+	}
+
 	.main-tag h2{
 		font-size:28px;
 	}
@@ -207,12 +211,13 @@ b {
 
 .header-small{
 	height:60px;
+	opacity:.9;
 
 	.page-context{
 		top:5px;
 
 		input{
-			padding:8px;
+			padding:8px 8px 8px 50px;
 		}
 	}
 
