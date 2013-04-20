@@ -3,9 +3,8 @@
 <head>
 	<meta charset=utf-8>
 	<title>HypeM Hack</title>
-	<link rel="stylesheet" type="text/css" href="http://clintonhalpindesign.com/assets/style/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/style/style.css">
-	<link rel="stylesheet" type="text/css" href="assets/style/vendor/font-awesome.css">
+
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,900,500,700' rel='stylesheet' type='text/css'>
 </head>
 <body>

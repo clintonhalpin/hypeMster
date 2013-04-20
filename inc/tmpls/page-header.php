@@ -1,9 +1,16 @@
 <div class="wrapper">
-	<div class="header">
+	<div class="header header-large header-dark">
 			<div class="main-tag"><h2><a href="#">HYPEMACHINE</a></h2></div>
-			<span class="page-context"><h2>clintonhalpin Favorites ( 29 )</h2></span>
-			<div class="util">
-				<h2><a href="tmpls/datadump.html">All Data</a></h2>
-				<h2><a href="tmpls/searchFunction.html">Search</a></h2>
+			<div class="page-context">
+				<!-- <div class="results-shown">
+					<span class="icon-remove-circle"></span> 
+					<h2>X Showing 18 Results for "Asap Rocky"</h2>
+				</div>-->
+				<div class="hypeSearch">
+						<form class="form-search">
+							<input type="text" placeholder="Search the Hype Machine" class="search-hypeM">
+						</form>
+				</div>
 			</div>
+			<div class="util"></div>
 	</div>

@@ -28,6 +28,9 @@
 				if (e.which == 13) {
 					var value = $(this).val();
 					self.fetch(value);
+
+					this.blur();
+					
 					return false;
 				}
 			});
@@ -58,7 +61,21 @@
 		username: 'clintonhalpin'
 	});
 
+
 })(jQuery);
+
+
+
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    
+	if ( scroll >= 20 ) {
+		$(".header").addClass("header-small");
+	} else {
+		$(".header").removeClass("header-small");
+	}
+
+ });
 
 
 
