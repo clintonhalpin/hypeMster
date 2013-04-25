@@ -8,7 +8,7 @@
 				</div>-->
 				<div class="hypeSearch">
 						<form class="form-search icon-search">
-							<input type="text" placeholder="Search the Hype Machine" class="search-hypeM">
+							<input type="text" placeholder="Search for an Artist or Track" class="search-hypeM">
 						</form>
 				</div>
 			</div>
