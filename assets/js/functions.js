@@ -1,12 +1,37 @@
 (function($) {
 
+	window.hypeApp = {
+		Models: {},
+		Collections: {},
+		Views: {}
+	};
+
+	hypeApp.init = function( config ){
+		var self = this;
+		self.username = config.username;
+		console.log( self.username);
+	};
+
+
+	// Set Everything up
+	
+	hypeApp.init({
+		template: $('#favorites-template').html(),
+		container: $('.hypeResults'),
+		username: 'clintonhalpin'
+	});
+
+
+
+
+
+
 	var hypeM = {
 
 		init: function( config ) {
 			this.template = config.template;
 			this.container = config.container;
 			this.bindEvents();
-			this.onload();
 		},
 
 		attachTemplate: function(hypeData) {
@@ -43,19 +68,19 @@
 			});
 		},
 
-		onload: function() {
-			var localStorage = localStorage.getItem('artistSearch');
+		// onload: function() {
+		// 	// var localStorage = localStorage.getItem('artistSearch');
 
-			if ( localStorage != undefined ) {
-				console.log(localStorage);
-			}
-		},
+		// 	if ( localStorage != undefined ) {
+		// 		console.log(localStorage);
+		// 	}
+		// },
 
-		setLocal: function(v) {
-			localStorage.setItem('artistSearch',v);
+		// setLocal: function(v) {
+		// 	localStorage.setItem('artistSearch',v);
 
-			var artistSearch = localStorage.getItem('artistSearch');
-		},
+		// 	var artistSearch = localStorage.getItem('artistSearch');
+		// },
 		
 		fetch: function(value) {
 			var self = this,
