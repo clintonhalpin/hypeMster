@@ -1,29 +1,5 @@
 (function($) {
 
-	window.hypeApp = {
-		Models: {},
-		Collections: {},
-		Views: {}
-	};
-
-	hypeApp.init = function( config ){
-		var self = this;
-		self.username = config.username;
-		console.log( self.username);
-	};
-
-
-	// Set Everything up
-	
-	hypeApp.init({
-		template: $('#favorites-template').html(),
-		container: $('.hypeResults'),
-		username: 'clintonhalpin'
-	});
-
-
-
-
 
 
 	var hypeM = {
