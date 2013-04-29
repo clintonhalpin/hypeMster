@@ -5,19 +5,24 @@
 	};
 
 	hypeApp.Events = {
-		onStart: function () {
-			console.log('We Started');
-		},
 
-		onThat: function() {
-			console.log('Something Else');
+		onStart: function () {
+
+			function checkForLocal() {
+				// is Local Storage Availble to Browser
+					// if it is render items
+					// else render the homepage
+			}
+
+			// Call Check For Local
+						
 		}
+
 	},
 
 	hypeApp.init = function( config ){
 		this.username = config.username;
 		this.Events.onStart();
-		this.Events.onThat();
 	};
 
 	hypeApp.init({ username: 'clintonhalpin' });
