@@ -1,13 +1,12 @@
 (function($) {
 
-
-
 	var hypeM = {
 
 		init: function( config ) {
 			this.template = config.template;
 			this.container = config.container;
 			this.bindEvents();
+		
 		},
 
 		attachTemplate: function(hypeData) {
@@ -16,7 +15,6 @@
 			this.container.empty();
 			this.container.append( template( this.hypeData ) );
 		},
-
 
 
 		bindEvents: function() {
@@ -44,26 +42,10 @@
 			});
 		},
 
-		// onload: function() {
-		// 	// var localStorage = localStorage.getItem('artistSearch');
-
-		// 	if ( localStorage != undefined ) {
-		// 		console.log(localStorage);
-		// 	}
-		// },
-
-		// setLocal: function(v) {
-		// 	localStorage.setItem('artistSearch',v);
-
-		// 	var artistSearch = localStorage.getItem('artistSearch');
-		// },
-		
 		fetch: function(value) {
 			var self = this,
 				v = encodeURIComponent(value.trim()),
 				urlSearch = 'http://hypem.com/playlist/search/' + v + '/json/1/data.json';
-
-			self.setLocal(v);
 
 			$.getJSON( urlSearch, function( data ) {
 				self.hypeData = $.map( data, function( hypeData ) {

@@ -5,7 +5,7 @@
 <!-- App Scripts -->
 	<?php include 'tmpls/view-handlebars/searchResults.php'; ?>
 	
-	<script type="text/javascript" src="assets/js/functions.js"></script>
+	<script type="text/javascript" src="assets/js/functions_v2.js"></script>
 </body>
 </html>
 
