@@ -9,16 +9,24 @@
 		onStart: function () {
 
 			function checkForLocal() {
-				// is Local Storage Availble to Browser
-					// if it is render items
-					// else render the homepage
+				
+				var key = 'searchHistoryfafa';
+
+				if(localStorage && localStorage.getItem(key)) {
+					console.log( JSON.parse( localStorage.getItem( key ) ) );
+				} else {
+					console.log('LocalStorage Hasn't been Set');
+				}
 			}
 
-			// Call Check For Local
-						
+			checkForLocal();
 		}
 
+		
+
 	},
+
+
 
 	hypeApp.init = function( config ){
 		this.username = config.username;
