@@ -6,12 +6,9 @@
 				</a>
 
 				<div class="bd">
-					<h1>{{artist}} - {{title}}</h1>
-					
+					<h1>{{artist}} - {{title}}</h1>	
 				</div>
-
 			</div>
-
 		{{/each}}
 	</script>	
 
