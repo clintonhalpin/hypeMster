@@ -12,11 +12,14 @@
 		uIEvents: function() {
 			var self = hypeM;
 
+			function addSearchUI() {
+				$('.util').text('Clear Search');
+			};
+
 			$(".search-hypeM").keydown(function(e) {
 				if (e.which == 13) {
 					
 					// Capture Value and Encode to change spaces to %20's
-
 					var 
 
 					value = $(this).val(),
@@ -26,7 +29,10 @@
 					// Call Fetch Method with Encoded Value;
 
 					self.fetch(valEncoded);
-				
+					
+					addSearchUI();
+					
+
 					this.blur();
 					
 					return false;
