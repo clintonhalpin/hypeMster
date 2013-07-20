@@ -13,8 +13,12 @@
 			var self = hypeM;
 
 			function addSearchUI() {
-				$('.util').text('Clear Search');
+				$('.util').html("<a class=\"\clear-search\"\ href=\"\#\"\>Clear Search</a>");
 			};
+
+			$(".clear-search").on("click", function(e) {					
+					console.log('clicked');					
+			});
 
 			$(".search-hypeM").keydown(function(e) {
 				if (e.which == 13) {
