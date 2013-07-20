@@ -14,9 +14,19 @@
 
 			$(".search-hypeM").keydown(function(e) {
 				if (e.which == 13) {
-					var value = $(this).val();
-					self.fetch(value);
+					
+					// Capture Value and Encode to change spaces to %20's
 
+					var 
+
+					value = $(this).val(),
+					valEncoded = encodeURIComponent(value.trim())
+					;
+					
+					// Call Fetch Method with Encoded Value;
+
+					self.fetch(valEncoded);
+				
 					this.blur();
 					
 					return false;
@@ -33,11 +43,11 @@
 				}
 			});
 		},
-		
-		fetch: function(value) {
-			var self = this,
-				v = encodeURIComponent(value.trim()),
-				urlSearch = 'http://hypem.com/playlist/search/' + v + '/json/1/data.json';
+
+		fetch: function(valueEncoded) {
+			self = this;
+
+			var urlSearch = 'http://hypem.com/playlist/search/' + valueEncoded + '/json/1/data.json';
 				
 			$.getJSON( urlSearch, function( data ) {
 				self.hypeData = $.map( data, function( hypeData ) {
