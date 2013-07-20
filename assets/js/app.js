@@ -6,10 +6,10 @@
 			this.url = 'http://hypem.com/playlist/loved/' + config.username + '/json/1/data.json';
 			this.template = config.template;
 			this.container = config.container;
-			this.bindEvents();
+			this.uIEvents();
 		},
 
-		bindEvents: function() {
+		uIEvents: function() {
 			var self = hypeM;
 
 			$(".search-hypeM").keydown(function(e) {
