@@ -5,7 +5,7 @@
 
 <!-- Page Contents -->
 	
-	<div class="hypeResults"></div>
+	<div class="hypeResults"><h1>Search the HypeM!</h1></div>
 
 <!-- / Page Contents -->		
 
