@@ -1,4 +1,4 @@
-	<script id="favorites-template" type="text/x-handlebars-template">
+	<script id="singleResult" type="text/x-handlebars-template">
 		{{#each this}}
 			<div class="media hypeItem">
 				<a href="http://hypem.com/track/{{mediaid}}" target="_blank" class="img">

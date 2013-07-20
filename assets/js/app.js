@@ -9,8 +9,6 @@
 			this.bindEvents();
 		},
 
-		
-
 		bindEvents: function() {
 			var self = hypeM;
 
@@ -57,7 +55,7 @@
 	};
 
 	hypeM.init({
-		template: $('#favorites-template').html(),
+		template: $('#singleResult').html(),
 		container: $('.hypeResults'),
 		username: 'clintonhalpin'
 	});
