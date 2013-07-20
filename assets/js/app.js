@@ -9,17 +9,7 @@
 			this.bindEvents();
 		},
 
-		attachTemplate: function(hypeData) {
-			var template = Handlebars.compile( this.template );
-
-			// Empty the Container
-
-			this.container.empty();
-			
-			// Append To Container
-
-			this.container.append( template( this.hypeData ) );
-		},
+		
 
 		bindEvents: function() {
 			var self = hypeM;
@@ -58,7 +48,12 @@
 
 				self.attachTemplate(); 
 			});					
-		} 
+		},
+
+		attachTemplate: function(hypeData) {
+			var template = Handlebars.compile( this.template );
+			this.container.empty().append( template( this.hypeData ) );
+		}, 
 	};
 
 	hypeM.init({
