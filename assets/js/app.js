@@ -12,13 +12,23 @@
 		uIEvents: function() {
 			var self = hypeM;
 
-			function addSearchUI() {
-				$('.util').html("<a class=\"\clear-search\"\ href=\"\#\"\>Clear Search</a>");
+			function modifySearchAction() {
+				$('.action-SearchClear').removeClass('is-hidden');
 			};
 
-			$(".clear-search").on("click", function(e) {					
-					console.log('clicked');					
+			$(".action-SearchClear").on("click", function(e) {					
+				self.container.empty();	
+
+				$('.action-SearchClear').addClass("is-hidden");	
+				
+
+				$('.search-hypeM').val('');
+
+				
+				return false;			
 			});
+
+
 
 			$(".search-hypeM").keydown(function(e) {
 				if (e.which == 13) {
@@ -34,7 +44,7 @@
 
 					self.fetch(valEncoded);
 					
-					addSearchUI();
+					modifySearchAction();
 					
 
 					this.blur();

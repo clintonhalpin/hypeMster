@@ -12,5 +12,5 @@
 						</form>
 				</div>
 			</div>
-			<div class="util"></div>
+			<div class="util"><a class="action-SearchClear is-hidden" href="#">Clear Search</a></div>
 	</div>
