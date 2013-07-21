@@ -20,15 +20,10 @@
 				self.container.empty();	
 
 				$('.action-SearchClear').addClass("is-hidden");	
-				
-
 				$('.search-hypeM').val('');
 
-				
 				return false;			
 			});
-
-
 
 			$(".search-hypeM").keydown(function(e) {
 				if (e.which == 13) {
