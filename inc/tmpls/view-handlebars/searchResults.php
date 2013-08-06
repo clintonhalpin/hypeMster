@@ -12,3 +12,11 @@
 		{{/each}}
 	</script>	
 
+
+	<script id="favorites-templateHome" type="text/x-handlebars-template">
+		{{#each this}}
+			{{thumb_url_medium}}
+			
+		{{/each}}
+	</script>	
+

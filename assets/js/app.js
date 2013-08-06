@@ -7,6 +7,8 @@
 			this.template = config.template;
 			this.container = config.container;
 			this.bindEvents();
+			this.onLoad();
+
 		},
 
 		attachTemplate: function(hypeData) {
@@ -19,6 +21,34 @@
 			// Append To Container
 
 			this.container.append( template( this.hypeData ) );
+		},
+
+
+		onLoad: function() {
+			
+			var self = this,
+				
+				urlSearch = 'http://hypem.com/playlist/popular/3day/json/1/data.js';
+				
+			$.getJSON( urlSearch, function( data ) {
+				self.hypeData = $.map( data, function( hypeData ) {
+					attach(self.hypeData);		
+				});
+			});	
+
+			function attach(data){
+					self = this;
+					
+					var tmpl = $('#favorites-templateHome').html();
+
+					var template = Handlebars.compile( tmpl );
+					$('.hypeResults').empty();
+					$('.hypeResults').append( template(self.data) );
+
+					console.log(self.data);
+
+					
+			};	
 		},
 
 		bindEvents: function() {
@@ -56,13 +86,14 @@
 					return hypeData;
 				});
 
-				self.attachTemplate(); 
+				self.attachTemplate(this.template); 
 			});					
 		} 
 	};
 
 	hypeM.init({
 		template: $('#favorites-template').html(),
+		templateHome: $('#favorites-templateHome').html(),
 		container: $('.hypeResults'),
 		username: 'clintonhalpin'
 	});
